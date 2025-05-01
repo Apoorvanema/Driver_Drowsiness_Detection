@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        img {
+            width: 80%;
+            height: auto;
+            border: 2px solid #ddd;
+            margin-top: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Drowsiness Detection System</h1>
+        
+        <!-- Display the live webcam feed only if detection is running -->
+        {% if detection_running %}
+            <div class="video-frame">
+                <h2>Webcam Feed</h2>
+                <img src="{{ url_for('video_feed') }}" alt="Live Webcam Feed">
+            </div>
+        {% endif %}
+
+        <h2>Welcome {{ username }} </h2>
+        
+        <!-- Control Buttons -->
+        <div class="button-container">
+            <!-- Show the Start button only if detection is not running -->
+            {% if not detection_running %}
+                <form action="{{ url_for('start') }}" method="POST" style="display:inline;">
+                    <button type="submit">Start Detection</button>
+                </form>
+            {% endif %}
+
+            <!-- Show the Stop button only if detection is running -->
+            {% if detection_running %}
+                <form action="{{ url_for('stop') }}" method="POST" style="display:inline;">
+                    <button type="submit">Stop Detection</button>
+                </form>
+            {% endif %}
+        </div>
+
+        <!-- Logout Button -->
+        <div>
+            <a href="{{ url_for('logout') }}">
+                <button>Logout</button>
+            </a>
+        </div>
+
+        <p>Alerts will appear directly on the live stream if drowsiness or yawning is detected.</p>
+    </div>
+</body>
+</html>
