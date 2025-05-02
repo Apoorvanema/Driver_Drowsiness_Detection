@@ -11,3 +11,4 @@ pip install
 C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\static\sounds\Alert.wav
 C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\detection\haarcascade_frontalface_default.xml
 C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\shape_predictor_68_face_landmarks.dat
+https://beta.sqliteviewer.app/database.db/table/sessions

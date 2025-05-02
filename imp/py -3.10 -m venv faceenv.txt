@@ -1,4 +1,0 @@
-py -3.10 -m venv faceenv
-faceenv\Scripts\activate
-python drowsiness_yawn.py --alarm Alert.wav
-pip install "C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\dlib-19.24.6-cp310-cp310-win_amd64.whl"
