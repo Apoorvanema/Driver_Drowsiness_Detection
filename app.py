@@ -195,6 +195,6 @@ def logout():
 def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == '__main__':
+
     init_db()
-    app.run(debug=True)
+   

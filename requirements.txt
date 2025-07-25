@@ -1,14 +1,8 @@
-  
 dlib==19.16.0
 imutils==0.5.2
 numpy==1.15.4
-py -m pip install opencv-python==4.0.0.21
+opencv-python==4.0.0.21
 playsound==1.2.2
 scipy==1.2.0
-pip install numpy==1.15.4 scipy==1.2.0 opencv-python dlib imutils playsound
-
-pip install 
-C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\static\sounds\Alert.wav
-C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\detection\haarcascade_frontalface_default.xml
-C:\Users\patha\OneDrive\Desktop\Real-Time-Drowsiness-Detection-System\shape_predictor_68_face_landmarks.dat
-https://beta.sqliteviewer.app/database.db/table/sessions
+Flask
+waitress
